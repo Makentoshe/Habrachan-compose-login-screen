@@ -11,6 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import com.makentoshe.habrachan.screen.Screen
+import com.makentoshe.habrachan.screen.main.mainScreenGraph
 import com.makentoshe.habrachan.screen.onboarding.ui.OnboardingScreenLogin
 import com.makentoshe.habrachan.screen.onboarding.ui.OnboardingScreenSettings
 import com.makentoshe.habrachan.screen.onboardingScreenGraph
@@ -31,18 +32,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun buildNavigationController(): NavController {
     return rememberNavController().also { controller ->
-        NavHost(navController = controller, Screen.Splash.toString()) {
+        NavHost(navController = controller, Screen.Main.toString()) {
             splashScreenGraph(controller)
             onboardingScreenGraph(controller)
-
-            composable("test") {
-                Greeting("Test")
-            }
+            mainScreenGraph(controller)
         }
     }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
 }

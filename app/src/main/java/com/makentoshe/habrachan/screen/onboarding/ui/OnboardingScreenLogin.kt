@@ -23,7 +23,7 @@ fun OnboardingScreenLogin(
         Text("Login screen content")
 
         Button(onClick = {
-            controller.navigate(route = "test") {
+            controller.navigate(route = Screen.Main.toString()) {
                 controller.popBackStack(route = Screen.Onboarding.toString(), inclusive = true)
             }
 //        controller.navigate("test")

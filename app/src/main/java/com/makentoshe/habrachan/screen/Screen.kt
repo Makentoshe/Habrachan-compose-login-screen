@@ -3,6 +3,7 @@ package com.makentoshe.habrachan.screen
 object Screen {
     val Splash = SplashScreen
     val Onboarding = OnboardingScreen
+    val Main = MainScreen
 }
 
 object SplashScreen {
@@ -23,4 +24,8 @@ object OnboardingSettingsScreen {
 
 object OnboardingLoginScreen {
     override fun toString() = "$OnboardingScreen.login"
+}
+
+object MainScreen {
+    override fun toString() = "main"
 }

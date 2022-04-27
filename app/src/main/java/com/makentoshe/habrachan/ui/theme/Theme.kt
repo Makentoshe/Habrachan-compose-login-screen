@@ -12,14 +12,14 @@ private val DarkColorPalette = darkColors(
     primary = HabrBrand,
     onPrimary = Color.White,
     primaryVariant = HabrBrandVariant,
-    secondary = Teal200
+    secondary = HabrBrandVariant,
 )
 
 private val LightColorPalette = lightColors(
     primary = HabrBrand,
     onPrimary = Color.White,
     primaryVariant = HabrBrandVariant,
-    secondary = Teal200,
+    secondary = HabrBrandVariant,
 
     /* Other default colors to override
     background = Color.White,

@@ -62,12 +62,18 @@ dependencies {
     // Jetpack Compose
     // https://developer.android.com/jetpack/compose/setup
     val composeVersion = properties["version.androidx.compose"]
-    val composeActivityVersion = properties["version.androidx.compose.activity"]
-    val composeNavigationVersion = properties["version.androidx.compose.navigation"]
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
+
+    val composeActivityVersion = properties["version.androidx.compose.activity"]
     implementation("androidx.activity:activity-compose:$composeActivityVersion")
+
+    val composeNavigationVersion = properties["version.androidx.compose.navigation"]
     implementation("androidx.navigation:navigation-compose:$composeNavigationVersion")
+
+    val composeAccompanistPager = properties["version.compose.accompanist.pager"]
+    implementation("com.google.accompanist:accompanist-pager:$composeAccompanistPager")
+    implementation("com.google.accompanist:accompanist-pager-indicators:$composeAccompanistPager")
 
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
     implementation("androidx.compose.foundation:foundation:$composeVersion")
