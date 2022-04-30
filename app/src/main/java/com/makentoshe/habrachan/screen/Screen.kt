@@ -1,5 +1,6 @@
 package com.makentoshe.habrachan.screen
 
+import com.makentoshe.habrachan.screen.article.ArticleScreen
 import com.makentoshe.habrachan.screen.me.MeScreen
 
 object Screen {
@@ -8,6 +9,8 @@ object Screen {
     val Main = MainScreen
 
     val Me = MeScreen
+
+    val Article = ArticleScreen
 }
 
 object SplashScreen {

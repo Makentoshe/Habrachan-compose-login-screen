@@ -103,7 +103,7 @@ private fun MainScreenContentPages(tabs: List<String>, state: PagerState, contro
             Text(text = "Page: $page")
             Text(text = "Title: ${tabs[page]}")
             Button(onClick = {
-                //
+                controller.navigate(Screen.Article.toString())
             }) {
                 Text("Navigate to Article screen")
             }
