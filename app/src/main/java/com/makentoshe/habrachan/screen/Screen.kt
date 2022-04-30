@@ -2,6 +2,7 @@ package com.makentoshe.habrachan.screen
 
 import com.makentoshe.habrachan.screen.article.ArticleScreen
 import com.makentoshe.habrachan.screen.me.MeScreen
+import com.makentoshe.habrachan.screen.user.UserScreen
 
 object Screen {
     val Splash = SplashScreen
@@ -11,6 +12,8 @@ object Screen {
     val Me = MeScreen
 
     val Article = ArticleScreen
+
+    val User = UserScreen
 }
 
 object SplashScreen {

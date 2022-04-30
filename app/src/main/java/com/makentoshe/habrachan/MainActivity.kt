@@ -13,6 +13,7 @@ import com.makentoshe.habrachan.screen.main.mainScreenGraph
 import com.makentoshe.habrachan.screen.me.meScreenGraph
 import com.makentoshe.habrachan.screen.onboardingScreenGraph
 import com.makentoshe.habrachan.screen.splash.splashScreenGraph
+import com.makentoshe.habrachan.screen.user.userScreenGraph
 import com.makentoshe.habrachan.ui.theme.HabrachanOnboardingScreenTheme
 
 class MainActivity : ComponentActivity() {
@@ -34,6 +35,7 @@ fun buildNavigationController(): NavController {
             mainScreenGraph(controller)
             meScreenGraph(controller)
             articleScreenGraph(controller)
+            userScreenGraph(controller)
         }
     }
 }
