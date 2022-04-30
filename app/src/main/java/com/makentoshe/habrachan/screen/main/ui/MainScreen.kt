@@ -5,7 +5,6 @@ package com.makentoshe.habrachan.screen.main.ui
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Button
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
@@ -28,11 +27,14 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.PagerState
 import com.google.accompanist.pager.rememberPagerState
+import com.makentoshe.habrachan.screen.Screen
 import com.makentoshe.habrachan.ui.theme.HabrachanOnboardingScreenTheme
 import com.makentoshe.habrachan.ui.theme.brand
 import com.makentoshe.habrachan.ui.theme.dimmed
 import com.makentoshe.habrachan.ui.widget.Toolbar
 import kotlinx.coroutines.launch
+
+private val testIsLogin = true
 
 @Composable
 fun MainScreen(
@@ -40,7 +42,12 @@ fun MainScreen(
 ) = HabrachanOnboardingScreenTheme {
     Scaffold(topBar = {
         Toolbar("Habrachan(or Username)") {
-            IconButton(onClick = { println("Navigate to login screen") }) {
+            IconButton(onClick = { if (testIsLogin) {
+                controller.navigate(route = Screen.Me.User.toString())
+            } else {
+                controller.navigate(route = Screen.Me.Login.toString())
+            }
+            }) {
                 Icon(imageVector = Icons.Outlined.PermIdentity, contentDescription = null)
             }
         }

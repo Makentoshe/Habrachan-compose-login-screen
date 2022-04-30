@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun Toolbar(
-    navigationBuilder: @Composable () -> Unit = {},
+    navigationBuilder: (@Composable () -> Unit)? = null,
     titleBuilder: @Composable () -> Unit,
 ) = TopAppBar(
     contentColor = MaterialTheme.colors.onPrimary,
@@ -17,6 +17,6 @@ fun Toolbar(
 )
 
 @Composable
-fun Toolbar(title: String, navigationBuilder: @Composable () -> Unit = {}) = Toolbar(navigationBuilder) {
+fun Toolbar(title: String, navigationBuilder: (@Composable () -> Unit)? = null) = Toolbar(navigationBuilder) {
     Text(text = title, color = MaterialTheme.colors.onPrimary)
 }
