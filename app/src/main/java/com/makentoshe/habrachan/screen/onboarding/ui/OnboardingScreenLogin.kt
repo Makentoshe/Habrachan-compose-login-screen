@@ -8,13 +8,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
-import com.makentoshe.habrachan.screen.Screen
+import com.makentoshe.habrachan.screen.onboarding.OnboardingScreenNavigationController
 
 @Composable
 fun OnboardingScreenLogin(
-    controller: NavController
-) = OnboardingScreen(controller) {
+    controller: OnboardingScreenNavigationController,
+) = OnboardingScreen {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -22,12 +21,7 @@ fun OnboardingScreenLogin(
     ) {
         Text("Login screen content")
 
-        Button(onClick = {
-            controller.navigate(route = Screen.Main.toString()) {
-                controller.popBackStack(route = Screen.Onboarding.toString(), inclusive = true)
-            }
-//        controller.navigate("test")
-        }) {
+        Button(onClick = { controller.navigateToMainScreen() }) {
             Text("Finish onboarding screen")
         }
     }

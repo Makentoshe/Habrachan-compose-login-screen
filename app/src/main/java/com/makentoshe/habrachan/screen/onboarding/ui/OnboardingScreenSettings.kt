@@ -10,11 +10,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import com.makentoshe.habrachan.screen.Screen
+import com.makentoshe.habrachan.screen.onboarding.OnboardingScreenNavigationController
 
 @Composable
 fun OnboardingScreenSettings(
-    controller: NavController
-) = OnboardingScreen(controller) {
+    controller: OnboardingScreenNavigationController
+) = OnboardingScreen {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -22,9 +23,7 @@ fun OnboardingScreenSettings(
     ) {
         Text("Settings screen content")
 
-        Button(onClick = {
-            controller.navigate(route = Screen.Onboarding.Login.toString())
-        }) {
+        Button(onClick = { controller.navigateToOnboardingLoginScreen() }) {
             Text("Navigate to Login screen")
         }
     }

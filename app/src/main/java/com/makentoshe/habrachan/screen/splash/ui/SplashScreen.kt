@@ -14,6 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.NavController
 import com.makentoshe.habrachan.R
+import com.makentoshe.habrachan.navigation.SplashScreenNavigator
 import com.makentoshe.habrachan.screen.Screen
 import com.makentoshe.habrachan.ui.theme.HabrachanOnboardingScreenTheme
 import java.util.Timer
@@ -26,7 +27,7 @@ import kotlinx.coroutines.launch
 
 @Composable
 internal fun SplashScreen(
-    controller: NavController,
+    splashScreenNavigator: SplashScreenNavigator
 ) = HabrachanOnboardingScreenTheme {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -36,11 +37,7 @@ internal fun SplashScreen(
         Image(painter = painterResource(R.drawable.ic_launcher_background), "")
 
         Text("Splash screen here")
-        Button(onClick = {
-            controller.navigate(Screen.Onboarding.toString()) {
-                controller.popBackStack(route = Screen.Splash.toString(), inclusive = true)
-            }
-        }) {
+        Button(onClick = { splashScreenNavigator.navigateToOnboardingScreen() }) {
             Text("Next Screen (Onboarding or Main)")
         }
     }

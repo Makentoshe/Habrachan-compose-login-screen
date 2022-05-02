@@ -12,7 +12,7 @@ import com.makentoshe.habrachan.screen.article.articleScreenGraph
 import com.makentoshe.habrachan.screen.comments.commentsScreenGraph
 import com.makentoshe.habrachan.screen.main.mainScreenGraph
 import com.makentoshe.habrachan.screen.me.meScreenGraph
-import com.makentoshe.habrachan.screen.onboardingScreenGraph
+import com.makentoshe.habrachan.screen.onboarding.onboardingScreenGraph
 import com.makentoshe.habrachan.screen.splash.splashScreenGraph
 import com.makentoshe.habrachan.screen.user.userScreenGraph
 import com.makentoshe.habrachan.ui.theme.HabrachanOnboardingScreenTheme
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun buildNavigationController(): NavController {
     return rememberNavController().also { controller ->
-        NavHost(navController = controller, Screen.Main.toString()) {
+        NavHost(navController = controller, Screen.Splash.toString()) {
             splashScreenGraph(controller)
             onboardingScreenGraph(controller)
             mainScreenGraph(controller)

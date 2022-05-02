@@ -8,6 +8,6 @@ import com.makentoshe.habrachan.screen.splash.ui.SplashScreen
 
 fun NavGraphBuilder.splashScreenGraph(controller: NavController) {
     composable(route = Screen.Splash.toString()) {
-        SplashScreen(controller)
+        SplashScreen(SplashScreenNavigationController(controller))
     }
 }

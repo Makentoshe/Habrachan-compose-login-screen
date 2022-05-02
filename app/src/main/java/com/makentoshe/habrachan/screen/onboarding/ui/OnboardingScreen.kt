@@ -12,7 +12,6 @@ import com.makentoshe.habrachan.ui.theme.HabrachanOnboardingScreenTheme
 
 @Composable
 internal fun OnboardingScreen(
-    controller: NavController,
     content: @Composable (PaddingValues) -> Unit,
 ) = HabrachanOnboardingScreenTheme {
     Scaffold(topBar = { OnboardingScreenTopbar() }) {
