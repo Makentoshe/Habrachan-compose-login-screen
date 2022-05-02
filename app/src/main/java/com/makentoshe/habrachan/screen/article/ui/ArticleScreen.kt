@@ -10,7 +10,6 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.outlined.PermIdentity
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -48,7 +47,7 @@ private fun ArticleScreenContent(controller: NavController) = Column(
     Button(onClick = { controller.navigate(Screen.User.toString()) }) {
         Text(text = "Navigate to user screen")
     }
-    Button(onClick = {}) {
+    Button(onClick = { controller.navigate(Screen.Comments.Article.toString()) }) {
         Text(text = "Navigate to article comments screen")
     }
 }

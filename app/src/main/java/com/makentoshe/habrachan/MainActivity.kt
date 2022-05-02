@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.makentoshe.habrachan.screen.Screen
 import com.makentoshe.habrachan.screen.article.articleScreenGraph
+import com.makentoshe.habrachan.screen.comments.commentsScreenGraph
 import com.makentoshe.habrachan.screen.main.mainScreenGraph
 import com.makentoshe.habrachan.screen.me.meScreenGraph
 import com.makentoshe.habrachan.screen.onboardingScreenGraph
@@ -36,6 +37,7 @@ fun buildNavigationController(): NavController {
             meScreenGraph(controller)
             articleScreenGraph(controller)
             userScreenGraph(controller)
+            commentsScreenGraph(controller)
         }
     }
 }

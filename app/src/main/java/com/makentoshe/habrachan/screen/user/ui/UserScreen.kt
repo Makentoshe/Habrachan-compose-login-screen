@@ -46,7 +46,7 @@ private fun UserScreenContent(controller: NavController) = Column(
         Text(text = "User article screen")
     }
 
-    Button(onClick = {  }) {
+    Button(onClick = { controller.navigate(Screen.Comments.Thread.toString()) }) {
         Text(text = "User comments screen")
     }
 }
